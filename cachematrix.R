@@ -32,6 +32,7 @@ cacheSolve <- function(mat, ...) {
     message("getting cached inverse matrix")
     return(inv_mat)
   } else {
+    message("creating inverse matrix")
     inv_mat <- solve(mat$get())
     mat$setinverse(inv_mat)
     return(inv_mat)
